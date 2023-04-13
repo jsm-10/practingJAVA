@@ -13,13 +13,13 @@ import java.util.Scanner;
  * @author juans
  */
 public class CadenaServicio {
- Scanner sc = new Scanner(System.in);
+ Scanner sc = new Scanner(System.in).useDelimiter("\n");
     public CadenaServicio() {
     }
     
      public Cadena crearCadena(){
         System.out.println("Ingrese la Frase que desea: ");
-        String frase = sc.next();
+        String frase = sc.nextLine();
         int longitud;
         
         return new Cadena (frase);
@@ -67,5 +67,24 @@ public class CadenaServicio {
      }
  //Método compararLongitud(String frase), deberá comparar la longitud de la 
  //frase que compone la clase con otra nueva frase ingresada por el usuario.
-   
-}
+     
+    public void compararLongitud(Cadena fr){
+        
+        System.out.println("ingres la frase");
+        
+     String fraseusuario = sc.next();
+    
+        System.out.println(fraseusuario.compareTo(fr.getFrase()));
+     if(fraseusuario.compareTo(fr.getFrase()) == 0){
+         System.out.println("son iguasles");
+        
+     
+     
+     }else{
+     
+      System.out.println("son distintos");
+    } 
+     
+    }
+     
+ }
