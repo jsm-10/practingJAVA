@@ -24,6 +24,10 @@ public class Escritura {
         System.out.println(asd.mostrarVocales(fr1));
         System.out.println("El caracter se repite : " + asd.vecesReptido(fr1));
         
+        asd.compararLongitud(fr1);
+        
+        
+        
  
     }
     
