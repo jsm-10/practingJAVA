@@ -70,7 +70,7 @@ public class CadenaServicio {
      
     public void compararLongitud(Cadena fr){
         
-        System.out.println("ingres la frase");
+        System.out.println("ingrese la frase");
         
      String fraseusuario = sc.next();
     
@@ -86,5 +86,39 @@ public class CadenaServicio {
     } 
      
     }
-     
- }
+     public String unirFrases(Cadena fr) {
+         System.out.println("Ingrese una frase a unir");
+         String fraseusuario = sc.next();
+         return fr.getFrase().concat(fraseusuario);
+     }
+     public String reemplazar(Cadena fr) {
+         System.out.println("Elija un caracter para reemplazar las letras A");
+         String letra = sc.next();
+         String nuevaFrase = "";
+         String digit = "";
+         for (int i = 0; i<fr.getLongitud() ; i++){
+             digit = fr.getFrase().substring(i, i+1);
+             switch (digit) {
+                 case "a": digit = letra;
+                 default: 
+                     nuevaFrase = nuevaFrase.concat(digit);
+             }
+         }
+         return nuevaFrase;
+     }
+     public void contieneFrase (Cadena fr) {
+          System.out.println("Que letra quiere saber si se encuentra?");
+         String letra = sc.next();
+         String digit = "";
+         for (int i = 0; i<fr.getLongitud()-1 ; i++){
+             digit = fr.getFrase().substring(i, i+1);
+             if (digit.equalsIgnoreCase(letra)){
+                 System.out.println("Se encontro la letra");
+             break;
+             }
+             }
+                   
+             
+         }
+     }
+ 

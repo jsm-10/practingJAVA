@@ -25,7 +25,9 @@ public class Escritura {
         System.out.println("El caracter se repite : " + asd.vecesReptido(fr1));
         
         asd.compararLongitud(fr1);
-        
+        System.out.println(asd.unirFrases(fr1));
+        System.out.println(asd.reemplazar(fr1));
+        asd.contieneFrase(fr1);
         
         
  
